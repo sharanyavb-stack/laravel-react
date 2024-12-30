@@ -28,6 +28,12 @@ cd laravel-react
 
 ```
 docker-compose up --build
+
+if frontend throws error then run seperately
+
+ step 1: docker build -t frontend  .
+ step 2: docker run -p 3000:3000 frontend
+
 ```
 
 
@@ -52,6 +58,13 @@ Then, run the following command to migrate the database:
 ```
 php artisan migrate
 ```
+
+To Insert news 
+
+```
+php artisan insert-news
+```
+
 
 Access the Laravel backend application: `http://localhost:8000`
 
