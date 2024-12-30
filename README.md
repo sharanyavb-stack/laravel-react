@@ -1,4 +1,4 @@
-# Welcome to Laravel, MySQL, React Dockerized Project
+# News Aggregator Project Using (React, Laravel)
 
 This project is a starter template for running a Laravel, MySQL, and React project using Docker.
 
