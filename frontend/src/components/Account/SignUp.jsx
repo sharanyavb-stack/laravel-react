@@ -23,6 +23,7 @@ const SignUp = ({ handleClose }) => {
         password_confirmation,
         agreement
       );
+      handleClose()
     } catch (error) {
       console.log(error);
     }

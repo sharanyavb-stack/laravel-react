@@ -12,6 +12,7 @@ const SignIn = ({ handleClose }) => {
     event.preventDefault();
     try {
       await userLogin(email, password);
+      handleClose()
     } catch (error) {
       console.log(error);
     }

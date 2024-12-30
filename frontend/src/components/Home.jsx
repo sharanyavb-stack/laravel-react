@@ -30,13 +30,16 @@ function Home() {
   const [pageNo, setPageNo] = useState(1);
   const [articlesShow, setArticlesShow] = useState([]);
   const userId = loginStorageData?.user?.id || "";
-
   const api = `http://127.0.0.1:8000/api/articles?s=${searchValue}&sort=desc&date=${selectedDate}&category=${selectedCategory}&source=${selectedSources}&page=${pageNo}&user=${userId}`;
 
   const { articles, lastPage, loading } = useArticleList(api);
 
   useEffect(() => {
-    setArticlesShow([...articlesShow, ...articles]);
+    if (searchValue) {
+      setArticlesShow(articles);
+    } else {
+      setArticlesShow([...articlesShow, ...articles]);
+    }
   }, [articles]);
 
   const handleSources = (value) => {
@@ -61,16 +64,23 @@ function Home() {
     setPageNo(pageNo + 1);
   };
 
+  const keyUpSearch = (searchValue) => {
+    setSearchValue(searchValue);
+    setPageNo(1);
+    setArticlesShow([]);
+  };
+
   return (
     <Container className="mt-2 minHeight">
       {loading && !searchValue && <Loading />}
       <Row>
         <InputGroup className="my-3">
           <FormControl
+            id="search"
             type="search"
             placeholder="Search"
             value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
+            onChange={(e) => keyUpSearch(e.target.value)}
             className="bg-light"
             style={{
               maxWidth: "768px",
@@ -103,7 +113,7 @@ function Home() {
               }}
             >
               <NavLink to={"/personalize"} className={"nav-link"}>
-                Personalize Your Feed Here
+                Personalize Your Feed
               </NavLink>
             </button>
           </div>
@@ -115,9 +125,11 @@ function Home() {
           hasMore={pageNo < lastPage}
           loader={<h4>Loading...</h4>}
           endMessage={
-            <p style={{ textAlign: "center" }}>
-              <b>Yay! You have seen it all</b>
-            </p>
+            !loading && (
+              <p style={{ textAlign: "center" }}>
+                <b>Yay! You have seen it all</b>
+              </p>
+            )
           }
         >
           <Article articles={articlesShow || []} />

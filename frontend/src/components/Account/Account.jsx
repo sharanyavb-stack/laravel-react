@@ -27,16 +27,13 @@ const Account = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="/personalize">
-                  Personalize news feed
-                </Dropdown.Item>
+                <Nav className="my-2 my-lg-0" navbarScroll onClick={userLogout}>
+                  <NavLink className={"nav-link"}>
+                    <BoxArrowRight className="pb-1" size={22} /> Logout
+                  </NavLink>
+                </Nav>
               </Dropdown.Menu>
             </Dropdown>
-          </Nav>
-          <Nav className="my-2 my-lg-0" navbarScroll onClick={userLogout}>
-            <NavLink className={"nav-link"}>
-              <BoxArrowRight className="pb-1" size={22} />
-            </NavLink>
           </Nav>
         </>
       ) : (

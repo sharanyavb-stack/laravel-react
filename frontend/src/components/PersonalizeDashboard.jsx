@@ -1,9 +1,10 @@
-import { Button, Col, Container, Row, Form, Accordion } from "react-bootstrap";
+import { Container, Accordion } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import useCustomization from "../hooks/useCustomization";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "./common/Loading";
+import { Navigate } from "react-router-dom";
 
 const PersonalizeDashboard = () => {
   const { loginStorageData, userLogout } = useAuth();
@@ -65,6 +66,10 @@ const PersonalizeDashboard = () => {
         type: nameVal,
       });
   };
+  
+  if (!userId) {
+    return <Navigate to={"/"} />;
+  }
 
   return (
     <Container className="mt-3">
@@ -107,18 +112,15 @@ const PersonalizeDashboard = () => {
                     }
                     className="customise-select-button"
                     style={{
-                      background: checkSource.includes(source.api)
+                      background: !checkSource.includes(source.api)
                         ? "#2563eb"
                         : "transparent",
-                      color: checkSource.includes(source.api)
+                      color: !checkSource.includes(source.api)
                         ? "white"
                         : "#2563eb",
                     }}
                   >
-                    <i
-                      className="fas fa-star"
-                      style={{ marginRight: "8px" }}
-                    ></i>
+                    
                     {source?.api}
                   </button>
                 ))}
@@ -141,10 +143,10 @@ const PersonalizeDashboard = () => {
                     }
                     className="customise-select-button"
                     style={{
-                      background: checkCategory.includes(category.category)
+                      background: !checkCategory.includes(category.category)
                         ? "#2563eb"
                         : "transparent",
-                      color: checkCategory.includes(category.category)
+                      color: !checkCategory.includes(category.category)
                         ? "white"
                         : "#2563eb",
                     }}
@@ -175,10 +177,10 @@ const PersonalizeDashboard = () => {
                     }
                     className="customise-select-button"
                     style={{
-                      background: checkAuthor.includes(author.author)
+                      background: !checkAuthor.includes(author.author)
                         ? "#2563eb"
                         : "transparent",
-                      color: checkAuthor.includes(author.author)
+                      color: !checkAuthor.includes(author.author)
                         ? "white"
                         : "#2563eb",
                     }}
