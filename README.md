@@ -15,7 +15,7 @@ This project is a starter template for running a Laravel, MySQL, and React proje
 1. Clone this repository to your local machine:
 
 ```
-git clone https://github.com/murschid/innoscripta.git
+git clone https://github.com/sharanyavb-stack/laravel-react.git
 ```
 
 2. Go to the project directory:
@@ -98,7 +98,7 @@ Before running without Docker kindly make sure that Composer is installed and yo
 1. Clone this repository to your local machine:
 
 ```
-git clone https://github.com/murschid/innoscripta.git
+git clone https://github.com/sharanyavb-stack/laravel-react.git
 
 cd innoscripta/backend
 ```
