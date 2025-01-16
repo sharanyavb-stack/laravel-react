@@ -102,4 +102,12 @@ docker-compose up
 
 # laravel-react screenshots
 
-<img width="1788" alt="Image" src="https://github.com/user-attachments/assets/7d67617e-da3f-40b1-a21f-8e720301828b" />
+<img width="200" alt="Image" src="https://github.com/user-attachments/assets/7d67617e-da3f-40b1-a21f-8e720301828b" />
+
+<img width="200" alt="Image" src="https://github.com/user-attachments/assets/81a3e555-2166-4818-aa39-46e67494148e" />
+
+<img width="200" alt="Image" src="https://github.com/user-attachments/assets/f6cf0c6d-9f01-487a-a42c-292aa1e3ea57" />
+
+<img width="200" alt="Image" src="https://github.com/user-attachments/assets/9daa1e93-4434-4513-a787-c19fcef69945" />
+
+<img width="200" alt="Image" src="https://github.com/user-attachments/assets/56658000-8c19-4dfd-800d-a93b26602568" />
