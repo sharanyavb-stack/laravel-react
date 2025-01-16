@@ -100,6 +100,9 @@ docker-compose up
 
 5. If you click on `logout` you'll be logged out and redirected to `login` panel.
 
+# Video Walkthrough: I have also included a video walkthrough of the project to provide a detailed explanation of the implementation. You can view the video via the following link: 
+   <a href="https://drive.google.com/file/d/1OonXmlndt6DzQhW3mWSfbE2if-b-eDkb/view?usp=drive_link" />
+
 # laravel-react screenshots
 
 <img width="200" alt="Image" src="https://github.com/user-attachments/assets/7d67617e-da3f-40b1-a21f-8e720301828b" />
