@@ -100,4 +100,6 @@ docker-compose up
 
 5. If you click on `logout` you'll be logged out and redirected to `login` panel.
 
-# laravel-react
+# laravel-react screenshots
+
+<img width="1788" alt="Image" src="https://github.com/user-attachments/assets/7d67617e-da3f-40b1-a21f-8e720301828b" />
